@@ -24,8 +24,11 @@ class SoMoSeComponent : public sensor::Sensor, public PollingComponent, public i
  protected:
   // int readline_(int readch, char *buffer, int len);
   unsigned read_count_{};
-  void read_data_();
-  void restart_read_();
+  void read_data_temperature_();
+  void restart_read_temperature_();
+
+  void read_data_moisture_();
+  void restart_read_moisture_();
 
   sensor::Sensor *moisture_sensor_{nullptr};
   sensor::Sensor *temperature_sensor_{nullptr};
